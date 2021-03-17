@@ -6,7 +6,9 @@ It loops the below function over every file in a specified folder, saving hours/
 pesky menus.
 
 
-Its use requires the installation of PyMeshlab using pip. To run the code, you need the files "Filter_script.mlx"
+Requirements: Meshlab software on PC, and installation of PyMeshlab using pip 
+
+To run the code, you need the files "Filter_script.mlx"
 and "geometric_measures.py" in the current working directory, as well as "Geometric measures output.py", which is 
 where you execute the script.
 

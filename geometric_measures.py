@@ -1,4 +1,4 @@
-directory = "Your_file_path"  # Folder where the obj files are - CHANGE REQUIRED
+directory = "Your_file_path"  # Folder where the obj files are - INPUT REQUIRED
 
 def geometric_measures (file):
 

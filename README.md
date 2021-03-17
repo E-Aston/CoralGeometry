@@ -14,11 +14,17 @@ The code runs a series of filters using Meshlab and returns the following as a .
 "Geometric Measures.csv" in the current working directory:
 
 File_Path : File path to the original input mesh. Identifies each coral in the file
+
 Vol: Volume of first mesh
+
 CVH_Vol: Volume of minimum bounding convex hull enclosing original mesh
+
 ASR: Absolute spatial refuge. Volumetric measure of shelter capacity of colony
+
 PrOcc: Proportion Occupied. Proportion of the convex hull occupied by the coral lying inside it. Measures compactness.
+
 Surface_Area: 3D surface area of input colony (not the convex hull)
+
 SSF: Shelter size factor. Ratio of ASR to 3D surface area. Measure of size structure of refuges.
 
 Unit measurements depend on the input mesh. Transformations must be carried out by the user to get to square and cubic

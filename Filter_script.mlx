@@ -1,0 +1,8 @@
+<!DOCTYPE FilterScript>
+<FilterScript>
+ <filter name="Remove Isolated pieces (wrt Diameter)">
+  <Param max="7.19335" tooltip="Delete all the connected components (floating pieces) with a diameter smaller than the specified one" name="MinComponentDiag" type="RichAbsPerc" min="0" value="0.719334" description="Enter max diameter of isolated pieces"/>
+  <Param tooltip="if true, the unreferenced vertices remaining after the face deletion are removed." name="removeUnref" type="RichBool" value="true" description="Remove unfreferenced vertices"/>
+ </filter>
+ <filter name="Convex Hull"/>
+</FilterScript>

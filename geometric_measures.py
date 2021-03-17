@@ -1,4 +1,4 @@
-directory = "C:/Users/ruth/Documents/objs/"  # Folder where the obj files are - CHANGE REQUIRED
+directory = "Your_file_path"  # Folder where the obj files are - CHANGE REQUIRED
 
 def geometric_measures (file):
 

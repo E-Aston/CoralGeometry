@@ -18,9 +18,9 @@ SSF: Shelter size factor. Ratio of ASR to 3D surface area. Measure of size struc
 Unit measurements depend on the input mesh. Transformations must be carried out by the user to get to square and cubic
 cm.
 
-There are only 2 things for the user to do to make this code work. In both this file and "geometric_measures.py", the
-directory needs to be changed to direct python to the folder where all your .obj files are stored (marked INPUT NEEDED). 
-This folder can include other file types, it won't break the script - the loop will just ignore all non-.obj files.
+There is only one thing for the user to do to make this code work. In "Geometric measures execute.py" the directory needs
+to be changed to direct python to the folder where all your .obj files are stored. This folder can include other file types, 
+it won't break the script - the loop will just ignore all non-.obj files.
 
 
 '''

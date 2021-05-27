@@ -1,17 +1,19 @@
 # Geometric measures of corals
 
 Integration of MeshLab with python to compute several geometric measures of individual coral colonies.
+
 The contained python script is designed to automate elements of computing geometric measures of coral colonies.
 It loops the below function over every file in a specified folder, saving hours/days/weeks of clicking through
-pesky menus.
+pesky menus. The most efficient way of running this script is to put the .obj file of each coral in to a single
+folder, which you refer to in the script. 
 
 
 Requirements: Meshlab software on PC, and installation of PyMeshlab using pip, installation of os and 
 installation of csv
 
 To run the code, you need the files "Filter_script.mlx"
-and "geometric_measures.py" in the current working directory, as well as "Geometric measures output.py", which is 
-where you execute the script.
+and "geometric_measures.py" in the current working directory, as well as "Geometric measures execute.py", which is 
+the executbale script.
 
 The code runs a series of filters using Meshlab and returns the following as a .csv file called
 "Geometric Measures.csv" in the current working directory:
@@ -31,9 +33,9 @@ Surface_Area: 3D surface area of input colony (not the convex hull)
 SSF: Shelter size factor. Ratio of ASR to 3D surface area. Measure of size structure of refuges.
 
 Unit measurements depend on the input mesh. Transformations must be carried out by the user to get to square and cubic
-cm.
+cm. Note that your models must have been scaled in the software you used to create them for this code to work.
 
-There is only one thing for the user to do to make this code work. In "Geometric measures execute.py"
+There is only one thing for the user to do to make this code run properly. In "Geometric measures execute.py"
 the directory needs to be changed to direct python to the folder where all your .obj files are stored. This folder can
 include other file types, it won't break the script - the loop will just ignore all non-.obj files.
 

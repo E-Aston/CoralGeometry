@@ -1,6 +1,6 @@
 # Geometric measures of corals
 
-Integration of MeshLab with python to compute several geometric measures of individual coral colonies
+Integration of MeshLab with python to compute several geometric measures of individual coral colonies.
 The contained python script is designed to automate elements of computing geometric measures of coral colonies.
 It loops the below function over every file in a specified folder, saving hours/days/weeks of clicking through
 pesky menus.

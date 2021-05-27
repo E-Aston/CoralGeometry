@@ -29,7 +29,7 @@ import os
 from geometric_measures import geometric_measures
 import csv
 
-Variable_names = ['File_Path', "Vol", "CVH_Vol", "ASR", "PrOcc", "Surface_Area", "SSF"]  # Sets up a CSV with variable
+Variable_names = ['File_Path', "Vol", "CVH_Vol", "ASR", "PrOcc", "Surface_Area", "SSF", "SAVR"]  # Sets up a CSV with variable
 # names in current dir.
 with open("Geometric Measures.csv", "w", newline='') as f:
     write = csv.writer(f)

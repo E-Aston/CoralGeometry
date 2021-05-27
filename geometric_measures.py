@@ -22,8 +22,9 @@ def geometric_measures (file):
     ASR = (cvh_volume - mesh_volume) # Basic calculation for ASR
     PrOcc = (mesh_volume / cvh_volume)
     SSF = (ASR / mesh_sa)
+    SAVR = (mesh_sa / mesh_volume)
 
-    value_list = [str(file), mesh_volume, cvh_volume, ASR, PrOcc, mesh_sa, SSF]
+    value_list = [str(file), mesh_volume, cvh_volume, ASR, PrOcc, mesh_sa, SSF, SAVR]
 
     with open("Geometric Measures.csv", "a", newline='') as f:
         write = csv.writer(f)

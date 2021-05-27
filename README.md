@@ -7,7 +7,7 @@ pesky menus.
 
 
 Requirements: Meshlab software on PC, and installation of PyMeshlab using pip, installation of os and 
-installation of sys
+installation of csv
 
 To run the code, you need the files "Filter_script.mlx"
 and "geometric_measures.py" in the current working directory, as well as "Geometric measures output.py", which is 

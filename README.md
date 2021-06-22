@@ -11,8 +11,9 @@ folder, which you refer to in the script.
 Requirements: Meshlab software on PC, and installation of PyMeshlab using pip, installation of os and 
 installation of csv
 
-To run the code, you need the files "Filter_script.mlx"
-and "geometric_measures.py" in the current working directory, as well as "Geometric measures execute.py", which is 
+To run the code, you also need the files
+"geometric_measures.py", "Clean_Close.mlx" and "Filter_script.mlx" in the current working directory, 
+as well as "Geometric measures execute.py", which is 
 the executbale script.
 
 The code runs a series of filters using Meshlab and returns the following as a .csv file called

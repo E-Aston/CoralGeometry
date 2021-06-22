@@ -7,30 +7,34 @@ def geometric_measures (file):
     ms = pymeshlab.MeshSet()
 
     ms.load_new_mesh(file)  # Loads a mesh from input folder
-    ms.load_filter_script('Filter_script.mlx')  # Loads the filter script (this one cleans mesh and makes convex hull)
-    ms.apply_filter_script()  # Applies script
+
 
     ms.set_current_mesh(0)  # Makes the current mesh the original
     dict =(ms.compute_geometric_measures())  # Compute measures of original mesh
-    mesh_volume = dict['mesh_volume']
-    mesh_sa = dict ['surface_area']
+    mesh_sa = dict['surface_area'] # Assigns variable name
 
-    ms.set_current_mesh(1)  # Sets convex hull as current mesh
-    dict =(ms.compute_geometric_measures())  # Compute measures of convex hull
-    cvh_volume = dict['mesh_volume']  # Assigns mesh volume to variable cvh_volume
+    ms.load_filter_script('Clean_Close.mlx')  # Loads the filter script (this one cleans mesh and closes holes)
+    ms.apply_filter_script()  # Applies script
+
+    dict =(ms.compute_geometric_measures())  # Compute measures of closed mesh
+    mesh_volume = dict['mesh_volume']  # Assigns mesh volume to variable mesh_volume
+
+    ms.load_filter_script('Filter_script.mlx')  # Loads the filter script (this one makes a convex hull)
+    ms.apply_filter_script()  # Applies script
+
+    ms.set_current_mesh(1)  # Sets closed model as current mesh
+    dict = (ms.compute_geometric_measures())  # Compute measures of convex hull
+    cvh_volume = dict ['mesh_volume'] # Assigns variable name
 
     ASR = (cvh_volume - mesh_volume) # Basic calculation for ASR
     PrOcc = (mesh_volume / cvh_volume)
     SSF = (ASR / mesh_sa)
-    SAVR = (mesh_sa / mesh_volume)
 
-    value_list = [str(file), mesh_volume, cvh_volume, ASR, PrOcc, mesh_sa, SSF, SAVR]
+    value_list = [str(file), mesh_sa, mesh_volume, cvh_volume, ASR, PrOcc, SSF]
 
     with open("Geometric Measures.csv", "a", newline='') as f:
         write = csv.writer(f)
         write.writerow(value_list)
-
-
 
 
 

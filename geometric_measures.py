@@ -22,13 +22,13 @@ def geometric_measures (file):
     ms.load_filter_script('Filter_script.mlx')  # Loads the filter script (this one makes a convex hull)
     ms.apply_filter_script()  # Applies script
 
-    ms.set_current_mesh(1)  # Sets closed model as current mesh
+    ms.set_current_mesh(1)  # Sets convex hull as current mesh
     dict = (ms.compute_geometric_measures())  # Compute measures of convex hull
     cvh_volume = dict ['mesh_volume'] # Assigns variable name
 
     ASR = (cvh_volume - mesh_volume) # Basic calculation for ASR
-    PrOcc = (mesh_volume / cvh_volume)
-    SSF = (ASR / mesh_sa)
+    PrOcc = (mesh_volume / cvh_volume) # Proportion of cvh occupied by mesh (compactness)
+    SSF = (ASR / mesh_sa) # Shelter size factor (fragmentation of habitat)
 
     value_list = [str(file), mesh_sa, mesh_volume, cvh_volume, ASR, PrOcc, SSF]
 

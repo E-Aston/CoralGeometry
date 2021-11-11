@@ -15,6 +15,10 @@ required of the user is detecting markers and scaling models.
 Requirements: Active license for metashape. (optional) Python interpreter (we recommend PyCharm) for inspecting
 and editing the python code as required. 
 
+All you need to do is download the script "Metashape_Processing.py", and run it from inside Metashape. The process
+is guided at the beginning then applies the chosen settings to all chunks in the project. To set it up correctly, 
+just populate the document with photos of colonies, each one of these added as a separate chunk. 
+
 Defaults (and recommended values) for processing are as follows:
 
 Photo quality threshold: <0.35

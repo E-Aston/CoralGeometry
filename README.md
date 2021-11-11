@@ -25,20 +25,20 @@ Photo quality threshold: <0.35
 
 Alignment quality: High (1)
 
-Dense cloud quality: Medium (2)
+Dense cloud quality: Medium (4)
 
 Face count for model: High
 
 
 Part II: Automated metrics extraction
 
-This code automates the extraction of 8 3D complecity metrics from an obj. file.
+This code automates the extraction of 8 3D complexity metrics from an obj. file.
 It loops the below function over every file in a specified folder, saving hours/days/weeks of clicking through
 pesky menus. The most efficient way of running this script is to put the .obj file of each coral in to a single
 folder, which you refer to in the script. 
 
 
-Requirements: Meshlab software on PC, and installation of PyMeshlab using pip, installation of os and 
+Requirements: Python interpreter (we recommend PyCharm), Meshlab software on PC, and installation of PyMeshlab using pip, installation of os and 
 installation of csv
 
 To run the code, you also need the files

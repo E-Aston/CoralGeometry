@@ -19,9 +19,9 @@ Defaults (and recommended values) for processing are as follows:
 
 Photo quality threshold: <0.35
 
-Alignment quality: High
+Alignment quality: High (1)
 
-Dense cloud quality: High
+Dense cloud quality: Medium (2)
 
 Face count for model: High
 

@@ -1,8 +1,31 @@
 # Geometric measures of corals
 
-Integration of MeshLab with python to compute several geometric measures of individual coral colonies.
+Integration of MeshLab with python to compute several geometric measures of individual coral colonies. This is 
+split in to two parts - processing of photographs in Metashape to turn these in to 3D reconstructions, as well as 
+extracting complexity metrics. These scripts are easy to implement and follow assuming some knowledge of both using
+metashape and using a python interpreter / installing modules from the command line. 
 
-The contained python script is designed to automate elements of computing geometric measures of coral colonies.
+Part I: Metashape processing
+
+This script is a downloadable .py file that is run directly from the metashape GUI (graphical user interface).
+For every chunk present in the project, it performs end-to-end digitisation of a coral colony according to some
+user-input values. Fortunately, these are pop-up boxes that have attached instructions. The only manual step
+required of the user is detecting markers and scaling models.
+
+Requirements: Active license for metashape. (optional) Python interpreter (we recommend PyCharm) for inspecting
+and editing the python code as required. 
+
+Defaults (and recommended values) for processing are as follows:
+
+Photo quality threshold: <0.35
+Alignment quality: High
+Dense cloud quality: High
+Face count for model: High
+
+
+Part II: Automated metrics extraction
+
+This code automates the extraction of 8 3D complecity metrics from an obj. file.
 It loops the below function over every file in a specified folder, saving hours/days/weeks of clicking through
 pesky menus. The most efficient way of running this script is to put the .obj file of each coral in to a single
 folder, which you refer to in the script. 

@@ -28,10 +28,10 @@ Metashape.app.messageBox("The script that is about to execute will serially proc
                          "\n\n*Please note that because different users have different methods for scaling models (marker types are varied), this script does not provide for marker detection and scale bar placement. This should be done manually at the end of processing.")
 
 Alignquality = Metashape.app.getInt(label ="Pick an alignment quality for your chunks.\nHigh = 1\nMedium = 2\nLow = 4", value=1)
-dcquality = Metashape.app.getInt(label ="Pick an dense cloud quality for your chunks.\nHigh = 2\nMedium = 4\nLow = 8", value=2)
+dcquality = Metashape.app.getInt(label ="Pick an dense cloud quality for your chunks.\nHigh = 2\nMedium = 4\nLow = 8", value=4)
 
 scClean = Metashape.app.getFloat(label ="The sparse cloud will be cleaned using 3 iterations of point removal based on reprojection error, projection accuracy and reconstruction "
-                                        "uncertainty.\n Each removal will remove the worst x percent of points. Please choose this percentage. We recommend 90-95.", value=90)
+                                        "uncertainty.\n Each removal will remove the worst x percent of points. Please choose this percentage. We recommend 90-95.", value=95)
 
 for chunk in Metashape.app.document.chunks:
     chunk.analyzePhotos()

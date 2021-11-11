@@ -18,8 +18,11 @@ and editing the python code as required.
 Defaults (and recommended values) for processing are as follows:
 
 Photo quality threshold: <0.35
+
 Alignment quality: High
+
 Dense cloud quality: High
+
 Face count for model: High
 
 

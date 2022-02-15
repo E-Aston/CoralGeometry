@@ -14,6 +14,9 @@ ASR: Absolute spatial refuge. Volumetric measure of shelter capacity of colony
 PrOcc: Proportion Occupied. Proportion of the convex hull occupied by the coral lying inside it. Measures compactness.
 Surface_Area: 3D surface area of input colony (not the convex hull)
 SSF: Shelter size factor. Ratio of ASR to 3D surface area. Measure of size structure of refuges.
+SAVR: Suface area to volume ratio
+Diameter: Colony diameter (length along the longest horizontal axis of the bounding box)
+Height: Colony height (length along the z axis, equivalent to vertical distance between the bottom and the highest point of the colony
 
 Unit measurements depend on the input mesh. Transformations must be carried out by the user to get to square and cubic
 cm.
@@ -29,13 +32,13 @@ import os
 from geometric_measures import geometric_measures
 import csv
 
-Variable_names = ['File_Path', "Vol", "CVH_Vol", "ASR", "PrOcc", "Surface_Area", "SSF", "SAVR"]  # Sets up a CSV with variable
+Variable_names = ['File_Path', "Vol", "CVH_Vol", "ASR", "PrOcc", "Surface_Area", "SSF", "SAVR", "Diameter", "Height"]  # Sets up a CSV with variable
 # names in current dir.
 with open("Geometric Measures.csv", "w", newline='') as f:
     write = csv.writer(f)
     write.writerow(Variable_names)
 
-directory = "Your_file_path"  # Sets WD where obj files are stored - INPUT NEEDED
+directory = "C:/Your_file_path/"  # Sets WD where obj files are stored - INPUT NEEDED
 for filename in os.listdir(directory):
     if filename.endswith(".obj"):
         geometric_measures(os.path.join(directory, filename))

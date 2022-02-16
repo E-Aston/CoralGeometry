@@ -15,7 +15,7 @@ For every chunk present in the project, it performs end-to-end digitisation of a
 user-input values. Fortunately, these are pop-up boxes that have attached instructions. The only manual step
 required of the user is detecting markers and scaling models.
 
-Requirements: Active license for metashape. (optional) Python interpreter (we recommend PyCharm) for inspecting
+Requirements: Active license for metashape. Python interpreter (we recommend PyCharm) for inspecting
 and editing the python code as required. 
 
 All you need to do is download the script "Metashape_Processing.py", and run it from inside Metashape. The process
@@ -43,13 +43,10 @@ folder, which you refer to in the script. (instructions are embedded)
 
 Requirements: Python interpreter (we recommend PyCharm), installation of PyMeshlab using pip.
 
-To run the code, you also need the files
-"Clean_Close.mlx" and "Filter_script.mlx" in the current working directory, 
-as well as "Geometric measures execute.py", which is the executbale script.
 
 INSTRUCTIONS:
 
-Install python (ver 3.6 or above will work but we assume a fresh installation). Do so directly from the Python website. 
+Install python (ver 3.6 or above will work but we assume a fresh installation of 3.10 at the time of writing). Do so directly from the Python website. 
 https://www.python.org/downloads/
 
 When installing, ensure to check the box entitled "Add Python 3.XX to PATH" or nothing will work without manual intervention. 
@@ -60,11 +57,17 @@ paste the following to install pymeshlab
 
 pip install pymeshlab
 
-with this installed, the package will run. The other dependencies, os and csv, are pre-installed with python. 
+with this installed, the package will run. The other dependencies, os and csv, are pre-installed with python.
 
 To run the code, a python interpreter is needed. We recommend the use of PyCharm, a freely available integrated development engine (IDE)
 capable of running the code. This software comes with installation and setup instructions for first time users which may vary between 
 systems so we do not provide instructions on how to install here. Note that any interpreter can be used by those familiar with python. 
+
+TO MAKE THE CODE WORK:
+Create a new project in PyCharm (File > New Project) in your desired location, ensuring the "inherit global site packages" is checked, and that the base 
+interpreter is your installed version of python. On creation, an empty project will automatically open. 
+
+Download all of the files in this repository. 
 
 The code runs a series of filters using Meshlab and returns the following as a .csv file called
 "Geometric Measures.csv" in the current working directory:

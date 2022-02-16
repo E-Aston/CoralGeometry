@@ -72,7 +72,7 @@ for chunk in Metashape.app.document.chunks:
     High quality = 1
     
     '''
-    chunk.detectmarkers(target_type=Metashape.CircularTarget12bit, tolerance=100)
+    chunk.detectMarkers(target_type=Metashape.CircularTarget12bit, tolerance=30)
 
     chunk.matchPhotos(downscale=Alignquality, generic_preselection=True, reference_preselection=True)
     chunk.alignCameras()

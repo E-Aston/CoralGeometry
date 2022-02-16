@@ -67,10 +67,15 @@ TO MAKE THE CODE WORK:
 Create a new project in PyCharm (File > New Project) in your desired location, ensuring the "inherit global site packages" is checked, and that the base 
 interpreter is your installed version of python. On creation, an empty project will automatically open. 
 
-Download all of the files in this repository. 
+Download all of the files in this repository. Then, cut and paste the downloaded files from the zipped folder to the location of the new project file. 
+Once this is done, open the script "geometric_measures.py" in the project.  
+
+There is only one thing for the user to do to make this code run properly. the directory needs to be changed to direct python to the folder where all your
+.obj files are stored. This folder can include other file types, it won't break the script - the loop will just ignore all non-.obj files.
+It should look something like "C:/Documents/Project/objs/". Importantly you must use forward slashes and not backslashes (which are windows defaults). 
 
 The code runs a series of filters using Meshlab and returns the following as a .csv file called
-"Geometric Measures.csv" in the current working directory:
+"Geometric Measures.csv" in the current working directory. It is populated with the following:
 
 File_Path : File path to the original input mesh. Identifies each coral in the file
 
@@ -86,10 +91,9 @@ Surface_Area: 3D surface area of input colony (not the convex hull)
 
 SSF: Shelter size factor. Ratio of ASR to 3D surface area. Measure of size structure of refuges. Calculation: ASR / Surface_area = SSF
 
-Unit measurements depend on the input mesh. Transformations must be carried out by the user to get to square and cubic
+Diameter: Maximum colony diameter (length along x axis which is by default the longest horizontal axis in meshlab) 
+
+Height: Colony height (length along Z-axis of bounding box) 
+
+Measurement units depend on the input mesh. Transformations must be carried out by the user to get to square and cubic
 cm. Note that your models must have been scaled in the software you used to create them for this code to work.
-
-There is only one thing for the user to do to make this code run properly. In "Geometric measures execute.py"
-the directory needs to be changed to direct python to the folder where all your .obj files are stored. This folder can
-include other file types, it won't break the script - the loop will just ignore all non-.obj files.
-

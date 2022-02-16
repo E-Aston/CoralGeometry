@@ -68,11 +68,13 @@ Create a new project in PyCharm (File > New Project) in your desired location, e
 interpreter is your installed version of python. On creation, an empty project will automatically open. 
 
 Download all of the files in this repository. Then, cut and paste the downloaded files from the zipped folder to the location of the new project file. 
-Once this is done, open the script "geometric_measures.py" in the project.  
+Once this is done, open the script "geometric_measures.py" in the project. You should see also in the project tab that the other files are present. The two 
+used in this are the .mlx files - these must both be present in the project file for the code to work. 
 
-There is only one thing for the user to do to make this code run properly. the directory needs to be changed to direct python to the folder where all your
+There is only one thing for you to do to make this code run properly. the directory needs to be changed to direct python to the folder where all your
 .obj files are stored. This folder can include other file types, it won't break the script - the loop will just ignore all non-.obj files.
-It should look something like "C:/Documents/Project/objs/". Importantly you must use forward slashes and not backslashes (which are windows defaults). 
+It should look something like "C:/Documents/Project/objs/". Importantly you must use forward slashes and not backslashes (which are windows defaults).
+This is line 1 of the script and is marked "INPUT NEEDED". 
 
 The code runs a series of filters using Meshlab and returns the following as a .csv file called
 "Geometric Measures.csv" in the current working directory. It is populated with the following:
